@@ -1,0 +1,97 @@
+$point1 :#B05C59;
+$point2 : #D8A08F;
+$colorW: #fff;
+
+// 임시 넓이 width:1300px;
+
+main {
+    .container{
+        background-color: aquamarine;
+        width:1300px; margin:30px auto; // 여기서 마진값은 임의값
+        .tab {
+            background-color:$point2;
+            width:100%;
+            text-align: center;
+            display:flex; justify-content:space-around;
+            position:relative;
+            a {
+                text-transform:uppercase; font-size:0.9rem; color:$colorW;  
+                padding:20px; 
+                width:100%;
+                // width:170px; height:50px; line-height: 50px;
+            }
+            a:first-child {
+                background-color: $colorW; font-weight:700; color:$point1;
+            }
+            a:first-child::before {
+                content:''; display:inline; width:12.5%; height:4px; 
+                // background-color: #B05C59;
+                position:absolute; top:-3px; left:0; border-top:5px solid $point1;
+            }
+        }//e:.tab 
+        .tab_contents {
+            width:100%; height:350px;
+            overflow: hidden;
+            text-align: center; 
+            .tab1 {
+                display:flex;
+                flex-flow:row nowrap;
+                // justify-content: center;
+                .big_img {
+                    width:780px; height:35vh;
+                    background: url(../images/925e00e115701f52726bd4c38edee62c.jpg) no-repeat;
+                    background-size:cover;
+                    > * , > * > * {font-size: 0.9rem; padding-top:5px; letter-spacing: -0.03em; text-transform: uppercase;}
+                    p:first-child{padding-top:130px;}
+                    p {}
+                }//e:big_img
+                .thum {
+                    display: grid;
+                    grid-template-columns: repeat(3,1fr);
+                    width:520px;
+                    // 상품들 공통 선택자
+                    .product {
+                        // width:300px;
+                        > * , > * > * {font-size: 0.9rem; padding-top:5px; letter-spacing: -0.03em; text-transform: uppercase;}
+                        p:first-child{padding-top:60px;}
+                        // p{ del { font-size: 0.9rem;}}
+
+                    }//e:product
+                    // 상품 이미지들
+                    .pro1 {
+                        background: url(../images/6813e0b4f67103a4b2fd930127e9e6a4.jpg) no-repeat;
+                        background-size:cover;
+                    }
+                    .pro2 {
+                        background: url(../images/8342a141fee8f450d8cf958c02fd4df4.jpg) no-repeat;
+                        background-size:cover;
+                    }
+                    .pro3 {
+                        background: url(../images/986e01b804d091e939001f493d20fec7.jpg) no-repeat;
+                        background-size:cover;
+                    }
+                    .pro4 {
+                        background: url(../images/55761ae82b4cad76d8a2bcd380edd3bd.jpg) no-repeat;
+                        background-size:cover;
+                    }
+                    .pro5 {
+                        background: url(../images/02725e76afedc00bcb27046d7cfee3c3.jpg) no-repeat;
+                        background-size:cover;
+                    }
+                    .pro6 {
+                        background: url(../images/d3da39478faf148e16cd38a73ec2ef69.jpg) no-repeat;
+                        background-size:cover;
+                    }
+                }//e:thum
+            }
+            .tab2 {}
+            .tab3 {}
+            .tab4 {}
+            .tab5 {}
+            .tab6 {}
+            .tab7 {}
+            .tab8 {}
+            .tab2, .tab3, .tab4, .tab5, .tab6, .tab7, .tab8 {background-color: aqua; padding:100px;}
+        }//tab_contents
+    }//e:container
+}//e:main
