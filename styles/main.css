@@ -47,15 +47,66 @@ main .container .tab_contents .tab1 > * {
 main .container .tab_contents .tab1 .big {
   background: lightblue;
   width: 780px;
+  position: relative;
 }
-main .container .tab_contents .tab1 .big .big_pic p:first-child {
-  padding-top: 15%;
+main .container .tab_contents .tab1 .big .big_pic {
+  display: block;
+  background: url(../images/925e00e115701f52726bd4c38edee62c.jpg) no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+main .container .tab_contents .tab1 .big .big_pic span:first-child {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+main .container .tab_contents .tab1 .big .big_pic .text {
+  display: block;
+  width: 100%;
+  font-size: 0.9rem;
+  letter-spacing: -0.02em;
+  color: #fff;
+  position: relative;
+  z-index: 999;
+  padding-top: 100px;
+}
+main .container .tab_contents .tab1 .big .big_pic span {
+  opacity: 0;
 }
 main .container .tab_contents .tab1 .small {
   background: lightsalmon;
-  width: calc(100% - 780px);
+  width: 520px;
   display: flex;
   flex-flow: row wrap;
+  position: relative;
+}
+main .container .tab_contents .tab1 .small .pic {
+  display: block;
+  width: 33.3%;
+}
+main .container .tab_contents .tab1 .small .pic span:first-child {
+  width: 33.3%;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+main .container .tab_contents .tab1 .small .pic .text {
+  display: block;
+  width: 100%;
+  font-size: 0.9rem;
+  letter-spacing: -0.02em;
+  color: #fff;
+  position: relative;
+  z-index: 999;
+  padding-top: 50px;
+}
+main .container .tab_contents .tab1 .small .pic span {
+  opacity: 0;
 }
 main .container .tab_contents .tab1 .small .pic1 {
   background: url(../images/6813e0b4f67103a4b2fd930127e9e6a4.jpg);

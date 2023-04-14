@@ -2,6 +2,9 @@ $point1 :#B05C59;
 $point2 : #D8A08F;
 $colorW: #fff;
 
+@mixin fontStyle {
+    font-size:0.9rem; letter-spacing:-0.02em; color:$colorW;
+}
 // 임시 넓이 width:1300px; width:780px 520px
 
 main {
@@ -39,47 +42,88 @@ main {
                 .big {
                     background: lightblue;
                     width:780px;
+                    // width:60%;
+                    position:relative;
                     .big_pic {
-                        p:first-child {padding-top:15%;}
+                        display:block;
+                        background:url(../images/925e00e115701f52726bd4c38edee62c.jpg) no-repeat;
+                        background-size:cover; height:100%;
+                        span:first-child {
+                            width:100%; height:100%; background:rgba(0,0,0,0.5);
+                            position:absolute; left:0; top:0;
+                        }
+                        .text {
+                            display:block;
+                            width:100%;
+                            @include fontStyle; position:relative; z-index: 999;
+                            padding-top:100px;
+                        }
+                        span {opacity:0;}
                     }
                 }
                 .small {
                     background: lightsalmon;
-                    width:calc(100% - 780px);
+                    // width:calc(100% - 780px);
+                    width:520px;
+                    // width:40%;
                     display:flex;
                     flex-flow:row wrap;
+                    position:relative;
                     .pic {
-                        // background-color: #fff;
-                        // height:100%;
+                        display:block;
+                        // width:calc(100% - 173px);
+                        width:33.3%;
+                        span:first-child {
+                            width:33.3%; height:50%;
+                            background:rgba(0,0,0,0.3);
+                            position:absolute; left:0; top:0;
+                        }
+                        .text {
+                            display:block;
+                            width:100%;
+                            @include fontStyle; position:relative; z-index: 999;
+                            padding-top:50px;
+                        }
+                        span {opacity:0;}
                     }
                     .pic1 {
                         background: url(../images/6813e0b4f67103a4b2fd930127e9e6a4.jpg);
                         background-size:cover;
+                        // span:first-child {
+                        //     width:33.3%; height:50%;
+                        //     background:rgba(0,0,0,0.3);
+                        //     position:absolute; left:0; top:0;
+                        // }
                     }
                     .pic2 {
                         background: url(../images/8342a141fee8f450d8cf958c02fd4df4.jpg);
-                        background-size:cover;
+                        background-size:cover; 
+                        
                     }
                     .pic3 {
                         background: url(../images/986e01b804d091e939001f493d20fec7.jpg);
                         background-size:cover;
+                        
                     }
                     .pic4 {
                         background: url(../images/55761ae82b4cad76d8a2bcd380edd3bd.jpg);
                         background-size:cover;
+                        
                     }
                     .pic5 {
                         background: url(../images/02725e76afedc00bcb27046d7cfee3c3.jpg);
                         background-size:cover;
+                        
                     }
                     .pic6 {
                         background: url(../images/d3da39478faf148e16cd38a73ec2ef69.jpg);
                         background-size:cover;
+                        
                     }
                 }
+                
             }
             .tab2, .tab3, .tab4, .tab5, .tab6, .tab7, .tab8 {background-color: aqua; padding:100px; display:none;}
-
-        }
+        }//e:tab_contents
     }//e:container
 }
